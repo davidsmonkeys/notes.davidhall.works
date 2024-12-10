@@ -79,6 +79,10 @@ resulting in
 
 ## Building my blogging envionment
 
+## Structuring my Posts
+
+I notice that my posts appear in the right order however I see no dates and I'd like to keep track of when things are published. Therefore I've ideitified that I'd like to try and stucture posts with a prefix of YYYY-MM-DD in order that they keep an order in the file system and present me with information as to when the blog was published. 
+
 
 
 ## References 
