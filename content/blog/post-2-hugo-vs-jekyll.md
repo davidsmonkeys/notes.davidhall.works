@@ -30,11 +30,33 @@ Hugo on the other hand let me run the website locally under a polling mechansim.
 
 Secondly I note that Hugo doesn't come with a defult theme but I have chosen to go with [Hextra](https://imfing.github.io/hextra). as this appears to support most of the things that I'm looking for such as associated comments, code snippets and collapsable areas. 
 
-With the exption of getting started I also wanted a way to update the blog through PR so that I can review the content. I also wanted to utilise git hub pages for hosting of which the Hextra tempalte supports through git hub actions. (I note that Jekyll will do this too.)
+With the exption of getting started I also wanted a way to update the blog through PR so that I can review the content. I also wanted to utilise git hub pages for hosting of which the Hextra tempalte supports through git hub actions. (I note that Jekyll will do this too.) Information [here](https://imfing.github.io/hextra/docs/guide/deploy-site/)
 
 I want to be working with Markdown and I want the articles to be self contained through markdown so that if I decide that I want to move to another framework/site generator I can do that easily.
 
 I didn't want to use a full CMS such as WIX or wordpress as I don't need the interaction with the end users as per the audience of me and if I do want to do that I can replicate my article on something such as dev.to or medium. 
+
+## Hosting on github pages
+
+Hosting on github pages is reasonable stright forward however I had some issues with images that we're not being deployed. 
+
+{{% details title="Trouble with Images" %}}
+
+On deploying the site to github pages the iamges are not loading. On inveitgation using browser tools I see that I'm getting "206 partial content". 
+
+In the iamge I was using a direct reference "mountains.png" as the image lives in the same folder as the file. When checking what is being loaded generated as the output I see <img src="./mountains.png" alt="mountains" loading="lazy" />
+
+This results in the URL from the published site looking for "https://notes.davidhall.works/mountains.png"
+
+{{% /details %}}
+
+I updated the file in order that it's the original jpg and not a screen capture and republished to see if the issue is resolved. 
+
+
+
+## Building my blogging envionment
+
+
 
 ## References 
 

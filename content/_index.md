@@ -3,7 +3,7 @@ title:
 toc: false
 ---
 
-![mountains](mountains.png)
+![mountains](mountains.jpg)
 
 ## Explore
 
