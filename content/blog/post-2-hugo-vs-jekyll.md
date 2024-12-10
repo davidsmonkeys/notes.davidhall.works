@@ -40,17 +40,40 @@ I didn't want to use a full CMS such as WIX or wordpress as I don't need the int
 
 Hosting on github pages is reasonable stright forward however I had some issues with images that we're not being deployed. 
 
-{{% details title="Trouble with Images" %}}
+{{% details title="Trouble with Images" closed="true" %}}
 
 On deploying the site to github pages the iamges are not loading. On inveitgation using browser tools I see that I'm getting "206 partial content". 
 
-In the iamge I was using a direct reference "mountains.png" as the image lives in the same folder as the file. When checking what is being loaded generated as the output I see <img src="./mountains.png" alt="mountains" loading="lazy" />
+In the iamge I was using a direct reference "mountains.png" as the image lives in the same folder as the file. When checking what is being loaded generated as the output I see 
 
-This results in the URL from the published site looking for "https://notes.davidhall.works/mountains.png"
+```
+<img src="./mountains.png" alt="mountains" loading="lazy" />
+```
 
-{{% /details %}}
+This results in the URL from the published site looking for 
 
-I updated the file in order that it's the original jpg and not a screen capture and republished to see if the issue is resolved. 
+```
+"https://notes.davidhall.works/mountains.png" 
+
+```
+which is the right location accorsing to what is exported to the /public directory. 
+
+Now I want to be able to snip screenshots and publish them which I managed to get working with the below image declared as 
+```
+![homepage screenshot](post2-screenshot-homepage.png)
+```
+However for some reason I needed to put that image in a sub folder inside the blog directory. 
+
+![file structure](file-structure.png)
+
+resulting in
+
+![homepage screenshot](post2-screenshot-homepage.png)
+
+** The thing to note here is that the assets need renaming and moving to a folder with the same name as the blog in the source. This results in the generation putting the images under a folder for the blog. (Using VS code and snipping tool for screenshots)
+
+{{% /details %}} 
+
 
 
 
