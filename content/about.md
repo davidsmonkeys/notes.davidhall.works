@@ -3,4 +3,4 @@ title: About
 type: about
 ---
 
-This is the about page.
+Hi, I'm David and I'm a software enginner based in Sheffield, UK. 
